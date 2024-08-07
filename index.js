@@ -33,6 +33,7 @@ app.use("/", userRoute);
 app.use("/", bookRoutes);
 app.use("/signup", authRoutes);
 
+// middleware for handeling error doubt:is this custom?
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal sever error";

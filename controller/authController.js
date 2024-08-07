@@ -1,5 +1,6 @@
 import User from "../models/userModel.js";
 import bcryptjs from "bcryptjs";
+// bycriptjs is used to encrypr the password it will hash the password, doubt: how to decrypt the hashed password
 
 export const SignUp = async (req, res, next) => {
   const { username, email, password } = req;
