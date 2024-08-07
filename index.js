@@ -29,9 +29,9 @@ app.use(
     allowedHeaders: ["content-type"],
   })
 );
+app.use("/", authRoutes);
 app.use("/", userRoute);
 app.use("/", bookRoutes);
-app.use("/signup", authRoutes);
 
 // middleware for handeling error doubt:is this custom?
 app.use((err, req, res, next) => {
