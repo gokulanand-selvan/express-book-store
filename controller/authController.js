@@ -49,3 +49,7 @@ export const login = async (req, res, next) => {
     next(errorHandler(500, error.message));
   }
 };
+
+export const logout = (req, res) => {
+  res.clearCookie("Authorization").status(200).json("logout successful");
+};
